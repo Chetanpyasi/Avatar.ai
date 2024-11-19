@@ -1,0 +1,75 @@
+<html>
+<head>
+    <title>AVATAR.AI VIRTUAL TRYON</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  {% with messages = get_flashed_messages() %}  
+    {% if messages %}  
+        {% for message in messages %}  
+          <p>{{ message }}</p>  
+        {% endfor %}  
+    {% endif %}  
+  {% endwith %}  
+    <form action = "/" method = "post" enctype="multipart/form-data" action="javascript:void(0)">
+        <input type="file" name="file" />
+        <div align="center" style=" color:white;">
+            <h1 style="font-family:Berlin Sans FB;color:rgb(158, 0, 226)">
+              <strong> </strong>
+            </h1>
+              <input type="radio" id="radiobtn1" name="item" class="Send_data  input-hidden" value="cloth1" />
+              <label for="radiobtn1">
+                <img src="static/cloths/1.png" style="width:130px;border-radius:20px;" />
+                <br><br>
+                <span></span>
+              </label>
+              <input type="radio" id="radiobtn2" name="item" class="Send_data  input-hidden" value="cloth2" />
+              <label for="radiobtn2">
+                <img src="static/cloths/2.png" style="width:130px;border-radius:20px;" />
+                <br><br>
+                <span></span>
+              </label>
+              <br>
+              <input type="radio" id="radiobtn3" name="item" class="Send_data  input-hidden" value="cloth3" />
+              <label for="radiobtn3">
+                <img src="static/cloths/3.png" style="width:130px;border-radius:20px;" />
+                <br><br>
+                <span></span>
+              </label>
+              <input type="radio" id="radiobtn4" name="item" class="Send_data  input-hidden" value="cloth4" />
+              <label for="radiobtn4">
+                <img src="static/cloths/4.png" style="width:130px;border-radius:20px;" />
+                <br><br>
+                <span></span>
+              </label>
+              <input type="radio" id="radiobtn5" name="item" class="Send_data  input-hidden" value="cloth5" />
+              <label for="radiobtn5">
+                <img src="static/cloths/5.png" style="width:130px;border-radius:20px;" />
+                <br><br>
+                <span></span>
+              </label>
+              <input type="radio" id="radiobtn6" name="item" class="Send_data  input-hidden" value="cloth6" />
+              <label for="radiobtn6">
+                <img src="static/cloths/6.png" style="width:130px;border-radius:20px;" />
+                <br><br>
+                <span></span>
+              </label>
+              <input type="radio" id="radiobtn7" name="item" class="Send_data  input-hidden" value="cloth7" />
+              <label for="radiobtn7">
+                <img src="static/cloths/7.png" style="width:130px;border-radius:20px;" />
+                <br><br>
+                <span></span>
+              </label>
+              <input type="radio" id="radiobtn8" name="item" class="Send_data  input-hidden" value="cloth8" />
+              <label for="radiobtn8">
+                <img src="static/cloths/8.png" style="width:130px;border-radius:20px;" />
+                <br><br>
+                <span></span>
+              </label>
+            <div id="loading" style="color:rgb(157, 255, 0)">
+            </div>
+          </div>
+        <input type = "submit" value="Upload">
+    </form>
+</body>
+</html>
