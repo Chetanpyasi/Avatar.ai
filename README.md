@@ -30,4 +30,4 @@ Before running the project, make sure you have the following libraries installed
 You can install the necessary dependencies using the following command:
 
 ```bash
-pip install flask opencv-python cvzone werkzeug
+pip install requirements.txt
