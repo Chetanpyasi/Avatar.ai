@@ -1,0 +1,40 @@
+name: Run Avatar.ai Python Application
+
+on:
+  push:
+    branches:
+      - main # Trigger the workflow on pushes to the main branch
+  pull_request:
+    branches:
+      - main # Trigger the workflow on pull requests to the main branch
+
+jobs:
+  run-python-app:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout code
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Step 2: Set up Python
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8 # Choose the Python version you want to use
+
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt  # Assumes the repo has a requirements.txt file
+
+      # Step 4: Run the Python script
+      - name: Start Flask application
+        run: |
+          nohup python app.py &  # This runs the app in the background
+          sleep 10  # Give it time to start
+
+      - name: Test the Flask application
+        run: |
+          curl http://127.0.0.1:5000  # Example test request to your app
